@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import pedidoRouter from './routes/pedido.routes.js'
 import { connect } from './db/connection.js'
+import cors from 'cors'
 
 dotenv.config()
 
@@ -16,8 +17,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
-    res.send('Test')
+    res.send('Ver documentación: https://github.com/IKIGAI-Studios/pedidos-mean-back/blob/master/api-guide.md')
 })
+
+app.use(cors())
 
 app.use('/api/pedidos', pedidoRouter)
 
