@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
-    res.send('Ver documentación: https://github.com/IKIGAI-Studios/pedidos-mean-back/blob/master/api-guide.md')
+    res.send('Ver documentación de uso: https://github.com/IKIGAI-Studios/pedidos-mean-back/blob/master/api-guide.md')
 })
 
 app.use(cors())
